@@ -4,3 +4,4 @@
 * [item+zsh配置](/item+zsh/item+zsh.md)
 * [sublime+Markdown配置](/sublime/配置.md)
 * [KVO](/iOS/KVO.md)
+* [字符编码](/字符编码/字符编码.md)
