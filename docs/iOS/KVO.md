@@ -1,4 +1,4 @@
-### KVO实现原理
+### KVO实现原理 <!-- {docsify-ignore-all} -->
 官方文档描述：  
 Automatic key-value observing is implemented using a technique called isa-swizzling.
 
@@ -9,6 +9,8 @@ When an observer is registered for an attribute of an object the isa pointer of 
 You should never rely on the isa pointer to determine class membership. Instead, you should use the class method to determine the class of an object instance.
 
 简单来说就是苹果利用isa-swizzling技术，当我们给一个对象添加一个观察者时，首先创建一个新类继承自原来的类，重写相关set方法，在值变更前后通知观察者值有变更，然后将对象的isa指针指向新创建的类，当调用对象方法时就会从新类的方法列表里面找，从而在调用set方法修改值就会通知到观察者。
+
+苹果还重写了class和superclass方法，让使用者感觉还是原来的类。
 
 ### 实践
 新建HYDataManager类  
